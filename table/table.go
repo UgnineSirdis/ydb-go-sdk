@@ -186,6 +186,13 @@ type Session interface {
 		opts ...options.BulkUpsertOption,
 	) (err error)
 
+	BulkUpsertCsv(
+		ctx context.Context,
+		table string,
+		data []byte,
+		opts ...options.BulkUpsertOption,
+	) (err error)
+
 	ReadRows(
 		ctx context.Context,
 		path string,

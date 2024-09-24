@@ -1295,6 +1295,48 @@ func (s *session) BulkUpsert(ctx context.Context, table string, rows value.Value
 	return nil
 }
 
+// BulkUpsert uploads given list of ydb struct values to the table.
+func (s *session) BulkUpsertCsv(ctx context.Context, table string, data []byte,
+	opts ...options.BulkUpsertOption,
+) (err error) {
+	var (
+		callOptions []grpc.CallOption
+		onDone      = trace.TableOnSessionBulkUpsert(
+			s.config.Trace(), &ctx,
+			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/table.(*session).BulkUpsertCsv"),
+			s,
+		)
+	)
+	defer func() {
+		onDone(err)
+	}()
+
+	for _, opt := range opts {
+		if opt != nil {
+			callOptions = append(callOptions, opt.ApplyBulkUpsertOption()...)
+		}
+	}
+
+	_, err = s.tableService.BulkUpsert(ctx,
+		&Ydb_Table.BulkUpsertRequest{
+			Table: table,
+			Data:  data,
+			OperationParams: operation.Params(
+				ctx,
+				s.config.OperationTimeout(),
+				s.config.OperationCancelAfter(),
+				operation.ModeSync,
+			),
+		},
+		callOptions...,
+	)
+	if err != nil {
+		return xerrors.WithStackTrace(err)
+	}
+
+	return nil
+}
+
 // BeginTransaction begins new transaction within given session with given settings.
 func (s *session) BeginTransaction(
 	ctx context.Context,
