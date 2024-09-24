@@ -19,7 +19,7 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
 )
 
 // #nosec G101

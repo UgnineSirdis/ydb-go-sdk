@@ -18,13 +18,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"golang.org/x/sync/errgroup"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
 )
 
 func TestReadersWritersStress(t *testing.T) {

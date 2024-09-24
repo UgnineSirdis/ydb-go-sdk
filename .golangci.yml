@@ -48,16 +48,16 @@ linters-settings:
     # simplify code: gofmt with `-s` option, true by default
     simplify: true
   gofumpt:
-    module-path: github.com/ydb-platform/ydb-go-sdk/v3
+    module-path: github.com/UgnineSirdis/ydb-go-sdk/v3
   goimports:
     # put imports beginning with prefix after 3rd-party packages;
     # it's a comma-separated list of prefixes
-    local-prefixes: github.com/ydb-platform/ydb-go-sdk/v3
+    local-prefixes: github.com/UgnineSirdis/ydb-go-sdk/v3
   gci:
     sections:
       - standard # Standard section: captures all standard packages.
       - default # Default section: contains all imports that could not be matched to another section type.
-      - prefix(github.com/ydb-platform/ydb-go-sdk/v3) # Custom section: groups all imports with the specified Prefix.
+      - prefix(github.com/UgnineSirdis/ydb-go-sdk/v3) # Custom section: groups all imports with the specified Prefix.
     skip-generated: true
   goconst:
     # minimal length of string constant, 3 by default

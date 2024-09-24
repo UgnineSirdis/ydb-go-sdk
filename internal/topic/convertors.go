@@ -1,8 +1,8 @@
 package topic
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawydb"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawydb"
 )
 
 func OperationParamsFromConfig(operationParams *rawydb.OperationParams, cfg *config.Common) {

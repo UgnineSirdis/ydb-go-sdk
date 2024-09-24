@@ -21,12 +21,12 @@ import (
 
 	"github.com/golang-jwt/jwt/v4"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/secret"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xstring"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/secret"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xstring"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 const (

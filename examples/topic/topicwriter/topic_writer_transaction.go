@@ -5,10 +5,10 @@ import (
 	"fmt"
 	"strings"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
 )
 
 func CopyMessagesBetweenTopicsTxWriter(

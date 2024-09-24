@@ -3,8 +3,8 @@ package query
 import (
 	"context"
 
-	internal "github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
+	internal "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
 )
 
 type (

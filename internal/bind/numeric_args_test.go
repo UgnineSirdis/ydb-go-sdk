@@ -6,8 +6,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 func TestNumericArgsBindRewriteQuery(t *testing.T) {

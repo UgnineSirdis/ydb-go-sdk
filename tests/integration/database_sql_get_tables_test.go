@@ -13,9 +13,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
 )
 
 func TestDatabaseSqlGetTables(t *testing.T) {

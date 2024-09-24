@@ -4,10 +4,10 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stats"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type (

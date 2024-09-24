@@ -6,8 +6,8 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/background"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/background"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
 )
 
 var ErrUserCloseTopic = errors.New("ydb: user closed topic listener")

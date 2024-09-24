@@ -8,9 +8,9 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Issue"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xstring"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xstring"
 )
 
 // operationError reports about operation fail.

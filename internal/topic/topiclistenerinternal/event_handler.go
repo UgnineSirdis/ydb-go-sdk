@@ -4,8 +4,8 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
 )
 
 //go:generate mockgen -source event_handler.go -destination event_handler_mock_test.go --typed -package topiclistenerinternal -write_package_comment=false

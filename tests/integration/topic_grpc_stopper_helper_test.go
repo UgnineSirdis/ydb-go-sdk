@@ -8,7 +8,7 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
 )
 
 // GrpcStopper use interceptors for stop any real grpc activity on grpc channel and return error for any calls

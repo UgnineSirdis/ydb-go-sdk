@@ -9,9 +9,9 @@ import (
 	"path"
 	"testing"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
 )
 
 func TestCopyTables(t *testing.T) {

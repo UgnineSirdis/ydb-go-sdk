@@ -3,8 +3,8 @@ package topicreaderexamples
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
 )
 
 // PartitionStopHandled is example of sdk handle server signal about stop partition

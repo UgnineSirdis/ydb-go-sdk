@@ -1,8 +1,8 @@
 package topicoptions_test
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
 )
 
 func ExampleWithReaderCheckRetryErrorFunction() {

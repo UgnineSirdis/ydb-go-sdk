@@ -7,7 +7,7 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xiter"
 )
 
 // YDBCDCItem interface for represent record from table (and cdc event)

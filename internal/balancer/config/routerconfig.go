@@ -3,8 +3,8 @@ package config
 import (
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xstring"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xstring"
 )
 
 // Dedicated package need for prevent cyclo dependencies config -> balancer -> config

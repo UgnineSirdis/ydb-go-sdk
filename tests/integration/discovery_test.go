@@ -13,13 +13,13 @@ import (
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/balancers"
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/log"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/balancers"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/log"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestDiscovery(sourceTest *testing.T) {

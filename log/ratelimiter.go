@@ -1,7 +1,7 @@
 package log
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // Ratelimiter returns trace.Ratelimiter with logging events from details

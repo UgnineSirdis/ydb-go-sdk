@@ -13,11 +13,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	internalQuery "github.com/ydb-platform/ydb-go-sdk/v3/internal/query"
-	baseTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/version"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	internalQuery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query"
+	baseTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/version"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
 )
 
 func TestQueryTxExecute(t *testing.T) {

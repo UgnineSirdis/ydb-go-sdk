@@ -3,8 +3,8 @@ package topicwriterinternal
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type WriterWithTransaction struct {

@@ -3,9 +3,9 @@ package topicreadercommon
 import (
 	"sort"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // PublicCommitRangeGetter return data piece for commit messages range

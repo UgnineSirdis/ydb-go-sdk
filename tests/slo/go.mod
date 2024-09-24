@@ -6,7 +6,7 @@ require (
 	github.com/prometheus/client_golang v1.14.0
 	github.com/ydb-platform/gorm-driver v0.1.3
 	github.com/ydb-platform/ydb-go-sdk-auth-environ v0.3.0
-	github.com/ydb-platform/ydb-go-sdk/v3 v3.67.0
+	github.com/UgnineSirdis/ydb-go-sdk/v3 v3.67.0
 	golang.org/x/sync v0.7.0
 	golang.org/x/time v0.5.0
 	gorm.io/gorm v1.25.10
@@ -48,6 +48,6 @@ require (
 	xorm.io/builder v0.3.11-0.20220531020008-1bd24a7dc978 // indirect
 )
 
-replace github.com/ydb-platform/ydb-go-sdk/v3 => ../../.
+replace github.com/UgnineSirdis/ydb-go-sdk/v3 => ../../.
 
 replace xorm.io/xorm => github.com/ydb-platform/xorm v0.0.3

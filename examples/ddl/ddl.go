@@ -4,7 +4,7 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
 )
 
 //nolint:lll

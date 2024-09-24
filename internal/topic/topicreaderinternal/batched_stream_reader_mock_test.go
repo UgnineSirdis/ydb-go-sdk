@@ -10,8 +10,8 @@ import (
 	context "context"
 	reflect "reflect"
 
-	topicreadercommon "github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
-	tx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
+	topicreadercommon "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	tx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
 	gomock "go.uber.org/mock/gomock"
 )
 

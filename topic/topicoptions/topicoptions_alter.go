@@ -4,8 +4,8 @@ import (
 	"sort"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
 )
 
 // AlterOption type of options for change topic settings

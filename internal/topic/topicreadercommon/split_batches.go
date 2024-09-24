@@ -1,6 +1,6 @@
 package topicreadercommon
 
-import "github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreader"
+import "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreader"
 
 func ReadRawBatchesToPublicBatches(
 	msg *rawtopicreader.ReadResponse,

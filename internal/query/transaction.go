@@ -8,17 +8,17 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session"
-	queryTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	baseTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session"
+	queryTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	baseTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var (
@@ -80,7 +80,7 @@ func (tx *Transaction) QueryResultSet(
 	ctx context.Context, q string, opts ...options.Execute,
 ) (rs result.ClosableResultSet, finalErr error) {
 	onDone := trace.QueryOnTxQueryResultSet(tx.s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Transaction).QueryResultSet"), tx, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Transaction).QueryResultSet"), tx, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -131,7 +131,7 @@ func (tx *Transaction) QueryRow(
 	ctx context.Context, q string, opts ...options.Execute,
 ) (row query.Row, finalErr error) {
 	onDone := trace.QueryOnTxQueryRow(tx.s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Transaction).QueryRow"), tx, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Transaction).QueryRow"), tx, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -194,7 +194,7 @@ func (tx *Transaction) Exec(ctx context.Context, q string, opts ...options.Execu
 	finalErr error,
 ) {
 	onDone := trace.QueryOnTxExec(tx.s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Transaction).Exec"), tx.s, tx, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Transaction).Exec"), tx.s, tx, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -263,7 +263,7 @@ func (tx *Transaction) Query(ctx context.Context, q string, opts ...options.Exec
 	_ query.Result, finalErr error,
 ) {
 	onDone := trace.QueryOnTxQuery(tx.s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Transaction).Query"), tx.s, tx, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Transaction).Query"), tx.s, tx, q)
 	defer func() {
 		onDone(finalErr)
 	}()

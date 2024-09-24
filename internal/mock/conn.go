@@ -6,8 +6,8 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
 )
 
 type Conn struct {

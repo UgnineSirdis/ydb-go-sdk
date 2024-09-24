@@ -12,9 +12,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 // https://github.com/ydb-platform/ydb-go-sdk/issues/259
@@ -67,9 +67,9 @@ func TestIssue259IntervalFromDuration(t *testing.T) {
 		err := db.Table().DoTx(ctx, func(ctx context.Context, tx table.TransactionActor) error {
 			//
 			query := `
-		SELECT 
-			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T02:31:30+0000")) - 
-			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T01:31:30+0000")) 
+		SELECT
+			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T02:31:30+0000")) -
+			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T01:31:30+0000"))
 		`
 			res, err := tx.Execute(ctx, query, nil)
 			if err != nil {
@@ -98,8 +98,8 @@ func TestIssue259IntervalFromDuration(t *testing.T) {
 			//
 			query := `
 		DECLARE $delta AS Interval;
-	
-		SELECT 
+
+		SELECT
 			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T01:31:30+0000")) + $delta ==
 			DateTime::MakeTimestamp(DateTime::ParseIso8601("2009-02-14T02:31:30+0000"))
 		`

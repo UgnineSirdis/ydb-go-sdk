@@ -9,9 +9,9 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Table"
 	"google.golang.org/protobuf/proto"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/testutil"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/testutil"
 )
 
 func TestTxSkipRollbackForCommitted(t *testing.T) {

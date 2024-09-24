@@ -4,10 +4,10 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 func selectPaging(
@@ -27,25 +27,25 @@ func selectPaging(
 		DECLARE $limit AS Uint64;
 		DECLARE $lastCity AS Text;
 		DECLARE $lastNumber AS Uint32;
-		
+
 		$part1 = (
 			SELECT * FROM schools
 			WHERE city = $lastCity AND number > $lastNumber
 			ORDER BY city, number LIMIT $limit
 		);
-		
+
 		$part2 = (
 			SELECT * FROM schools
 			WHERE city > $lastCity
 			ORDER BY city, number LIMIT $limit
 		);
-		
+
 		$union = (
 			SELECT * FROM $part1
 			UNION ALL
 			SELECT * FROM $part2
 		);
-		
+
 		SELECT * FROM $union
 		ORDER BY city, number LIMIT $limit;
 		`, prefix)

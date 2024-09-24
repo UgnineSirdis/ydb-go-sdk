@@ -5,9 +5,9 @@ import (
 	"sort"
 	"strings"
 
-	balancerConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xstring"
+	balancerConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xstring"
 )
 
 // Deprecated: RoundRobin is an alias to RandomChoice now

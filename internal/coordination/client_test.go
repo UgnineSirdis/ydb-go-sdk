@@ -16,12 +16,12 @@ import (
 	"google.golang.org/protobuf/types/known/anypb"
 	"google.golang.org/protobuf/types/known/durationpb"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
 )
 
 func TestCreateNode(t *testing.T) {

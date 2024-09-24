@@ -5,8 +5,8 @@ import (
 	"log"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicsugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicsugar"
 )
 
 func (s *server) cdcLoop() {

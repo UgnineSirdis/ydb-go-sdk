@@ -3,7 +3,7 @@ package params
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/value"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/value"
 )
 
 type (

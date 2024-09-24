@@ -6,9 +6,9 @@ import (
 	"github.com/stretchr/testify/require"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 
-	internalQuery "github.com/ydb-platform/ydb-go-sdk/v3/internal/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
+	internalQuery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
 )
 
 func TestUnmarshallRow(t *testing.T) {

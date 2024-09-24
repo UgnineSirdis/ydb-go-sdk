@@ -5,10 +5,10 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/params"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/params"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stats"
 )
 
 type (

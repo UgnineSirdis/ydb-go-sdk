@@ -4,8 +4,8 @@ import (
 	"context"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // DatabaseSQL makes trace.DatabaseSQL with logging events from details

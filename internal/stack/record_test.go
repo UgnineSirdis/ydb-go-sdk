@@ -33,13 +33,13 @@ func TestRecord(t *testing.T) {
 	}{
 		{
 			act: Record(0),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:35)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:35)",
 		},
 		{
 			act: func() string {
 				return Record(1)
 			}(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:41)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:41)",
 		},
 		{
 			act: func() string {
@@ -47,7 +47,7 @@ func TestRecord(t *testing.T) {
 					return Record(2)
 				}()
 			}(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:49)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.TestRecord(record_test.go:49)",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -71,7 +71,7 @@ func TestRecord(t *testing.T) {
 				FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -179,7 +179,7 @@ func TestRecord(t *testing.T) {
 				FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -191,7 +191,7 @@ func TestRecord(t *testing.T) {
 				FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.testStruct",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.testStruct",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -203,7 +203,7 @@ func TestRecord(t *testing.T) {
 				FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -215,7 +215,7 @@ func TestRecord(t *testing.T) {
 				FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -227,7 +227,7 @@ func TestRecord(t *testing.T) {
 				// FileName(false),
 				Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1(record_test.go)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1(record_test.go)",
 		},
 		{
 			act: testStruct{depth: 0, opts: []recordOption{
@@ -239,7 +239,7 @@ func TestRecord(t *testing.T) {
 				// FileName(false),
 				// Line(false),
 			}}.TestFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1(record_test.go:19)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.testStruct.TestFunc.func1(record_test.go:19)",
 		},
 		{
 			act: (&testStruct{depth: 0, opts: []recordOption{
@@ -251,7 +251,7 @@ func TestRecord(t *testing.T) {
 				// FileName(false),
 				// Line(false),
 			}}).TestPointerFunc(),
-			exp: "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.(*testStruct).TestPointerFunc.func1(record_test.go:25)",
+			exp: "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.(*testStruct).TestPointerFunc.func1(record_test.go:25)",
 		},
 	} {
 		t.Run("", func(t *testing.T) {
@@ -279,10 +279,10 @@ func TestExtractNames(t *testing.T) {
 }
 
 func TestParseFunctionName(t *testing.T) {
-	name := "github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.TestParseFunctionName.func1"
+	name := "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.TestParseFunctionName.func1"
 	fnDetails := parseFunctionName(name)
 
-	require.Equal(t, "github.com/ydb-platform/ydb-go-sdk/v3/internal", fnDetails.pkgPath)
+	require.Equal(t, "github.com/UgnineSirdis/ydb-go-sdk/v3/internal", fnDetails.pkgPath)
 	require.Equal(t, "stack", fnDetails.pkgName)
 	require.Empty(t, fnDetails.structName, "Struct name should be empty for standalone functions")
 	require.Equal(t, "TestParseFunctionName", fnDetails.funcName)
@@ -300,7 +300,7 @@ func TestBuildRecordString(t *testing.T) {
 		lambdas:      true,
 	}
 	fnDetails := functionDetails{
-		pkgPath:    "github.com/ydb-platform/ydb-go-sdk/v3/internal",
+		pkgPath:    "github.com/UgnineSirdis/ydb-go-sdk/v3/internal",
 		pkgName:    "",
 		structName: "testStruct",
 		funcName:   "TestFunc",
@@ -311,7 +311,7 @@ func TestBuildRecordString(t *testing.T) {
 	line := 319
 
 	result := buildRecordString(optionsHolder, &fnDetails, file, line)
-	expected := "github.com/ydb-platform/ydb-go-sdk/v3/internal.testStruct.TestFunc.func1(record_test.go:319)"
+	expected := "github.com/UgnineSirdis/ydb-go-sdk/v3/internal.testStruct.TestFunc.func1(record_test.go:319)"
 	require.Equal(t, expected, result)
 }
 

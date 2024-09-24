@@ -12,10 +12,10 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_TableStats"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/value"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/value"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
 )
 
 func TestResultAny(t *testing.T) {

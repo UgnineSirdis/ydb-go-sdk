@@ -20,19 +20,19 @@ import (
 	grpcCodes "google.golang.org/grpc/codes"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/balancers"
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/log"
-	"github.com/ydb-platform/ydb-go-sdk/v3/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/balancers"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/log"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
@@ -252,21 +252,21 @@ func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
 							series_info: Text,
 							release_date: Date,
 							comment: Optional<Text>>>;
-		
+
 						DECLARE $seasonsData AS List<Struct<
 							series_id: Uint64,
 							season_id: Uint64,
 							title: Text,
 							first_aired: Date,
 							last_aired: Date>>;
-		
+
 						DECLARE $episodesData AS List<Struct<
 							series_id: Uint64,
 							season_id: Uint64,
 							episode_id: Uint64,
 							title: Text,
 							air_date: Date>>;
-		
+
 						REPLACE INTO series
 						SELECT
 							series_id,
@@ -275,7 +275,7 @@ func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
 							release_date,
 							comment
 						FROM AS_TABLE($seriesData);
-		
+
 						REPLACE INTO seasons
 						SELECT
 							series_id,
@@ -284,7 +284,7 @@ func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
 							first_aired,
 							last_aired
 						FROM AS_TABLE($seasonsData);
-		
+
 						REPLACE INTO episodes
 						SELECT
 							series_id,
@@ -332,8 +332,8 @@ func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
 						FROM
 							episodes
 						WHERE
-							series_id = $seriesID AND 
-							season_id = $seasonID AND 
+							series_id = $seriesID AND
+							season_id = $seasonID AND
 							episode_id = $episodeID;`,
 						table.NewQueryParameters(
 							table.ValueParam("$seriesID", types.Uint64Value(1)),
@@ -420,8 +420,8 @@ func TestBasicExampleNative(sourceTest *testing.T) { //nolint:gocyclo
 						FROM
 							episodes
 						WHERE
-							series_id = $seriesID AND 
-							season_id = $seasonID AND 
+							series_id = $seriesID AND
+							season_id = $seasonID AND
 							episode_id = $episodeID;`,
 						table.NewQueryParameters(
 							table.ValueParam("$seriesID", types.Uint64Value(1)),

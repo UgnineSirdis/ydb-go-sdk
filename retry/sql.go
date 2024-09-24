@@ -5,11 +5,11 @@ import (
 	"database/sql"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	budget "github.com/ydb-platform/ydb-go-sdk/v3/retry/budget"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	budget "github.com/UgnineSirdis/ydb-go-sdk/v3/retry/budget"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type doOptions struct {
@@ -68,7 +68,7 @@ func DoWithResult[T any](ctx context.Context, db *sql.DB,
 		zeroValue T
 		options   = doOptions{
 			retryOptions: []Option{
-				withCaller(stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/retry.DoWithResult")),
+				withCaller(stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/retry.DoWithResult")),
 			},
 		}
 		attempts = 0
@@ -181,7 +181,7 @@ func DoTxWithResult[T any](ctx context.Context, db *sql.DB, //nolint:funlen
 		zeroValue T
 		options   = doTxOptions{
 			retryOptions: []Option{
-				withCaller(stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/retry.DoTxWithResult")),
+				withCaller(stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/retry.DoTxWithResult")),
 			},
 			txOptions: &sql.TxOptions{
 				Isolation: sql.LevelDefault,

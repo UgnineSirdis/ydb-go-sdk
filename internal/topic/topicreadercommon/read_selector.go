@@ -3,7 +3,7 @@ package topicreadercommon
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/clone"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/clone"
 )
 
 type PublicReadSelector struct {

@@ -7,11 +7,11 @@ import (
 	"text/template"
 	"time"
 
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 type row struct {

@@ -3,8 +3,8 @@ package types
 import (
 	"bytes"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/scanner"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
 )
 
 const (

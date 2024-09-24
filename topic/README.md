@@ -1,10 +1,10 @@
 # `topic` - pure Go native client for [YDB Topic](https://ydb.tech/en/docs/concepts/topic)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/ydb-platform/ydb/blob/main/LICENSE)
 [![Release](https://img.shields.io/github/v/release/ydb-platform/ydb-go-sdk.svg?style=flat-square)](https://github.com/ydb-platform/ydb-go-sdk/releases)
-[![PkgGoDev](https://pkg.go.dev/badge/github.com/ydb-platform/ydb-go-sdk/v3)](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3/topic)
+[![PkgGoDev](https://pkg.go.dev/badge/github.com/UgnineSirdis/ydb-go-sdk/v3)](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3/topic)
 ![tests](https://github.com/ydb-platform/ydb-go-sdk/workflows/tests/badge.svg?branch=master)
 ![lint](https://github.com/ydb-platform/ydb-go-sdk/workflows/lint/badge.svg?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/ydb-platform/ydb-go-sdk/v3)](https://goreportcard.com/report/github.com/ydb-platform/ydb-go-sdk/v3)
+[![Go Report Card](https://goreportcard.com/badge/github.com/UgnineSirdis/ydb-go-sdk/v3)](https://goreportcard.com/report/github.com/UgnineSirdis/ydb-go-sdk/v3)
 [![codecov](https://codecov.io/gh/ydb-platform/ydb-go-sdk/branch/master/graph/badge.svg?precision=2)](https://app.codecov.io/gh/ydb-platform/ydb-go-sdk)
 ![Code lines](https://sloc.xyz/github/ydb-platform/ydb-go-sdk/?category=code)
 [![View examples](https://img.shields.io/badge/learn-examples-brightgreen.svg)](https://github.com/ydb-platform/ydb-go-examples/tree/master/topic)
@@ -18,7 +18,7 @@ See [ydb-go-sdk](https://github.com/ydb-platform/ydb-go-sdk) for describe all dr
 ## Installation
 
 ```sh
-go get -u github.com/ydb-platform/ydb-go-sdk/v3
+go get -u github.com/UgnineSirdis/ydb-go-sdk/v3
 ```
 
 ## Example Usage <a name="example"></a>
@@ -69,5 +69,5 @@ for {
         log.Fatal(err)
     }
 }
- 
+
 ```

@@ -14,12 +14,12 @@ import (
 	"google.golang.org/grpc/metadata"
 	grpcStatus "google.golang.org/grpc/status"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/params"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/params"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
 )
 
 func TestExecute(t *testing.T) {

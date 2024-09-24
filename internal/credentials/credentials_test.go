@@ -14,7 +14,7 @@ func TestCredentialsString(t *testing.T) {
 	}{
 		{
 			NewAnonymousCredentials(),
-			"Anonymous{From:\"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials.TestCredentialsString(credentials_test.go:16)\"}", //nolint:lll
+			"Anonymous{From:\"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials.TestCredentialsString(credentials_test.go:16)\"}", //nolint:lll
 		},
 		{
 			NewAnonymousCredentials(WithSourceInfo("test")),
@@ -22,7 +22,7 @@ func TestCredentialsString(t *testing.T) {
 		},
 		{
 			NewAccessTokenCredentials("123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"),
-			"AccessToken{Token:\"1234****WXYZ(CRC-32c: 81993EA5)\",From:\"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials.TestCredentialsString(credentials_test.go:24)\"}", //nolint:lll
+			"AccessToken{Token:\"1234****WXYZ(CRC-32c: 81993EA5)\",From:\"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials.TestCredentialsString(credentials_test.go:24)\"}", //nolint:lll
 		},
 		{
 			NewAccessTokenCredentials("123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ", WithSourceInfo("test")),

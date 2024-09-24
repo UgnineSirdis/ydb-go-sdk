@@ -12,9 +12,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 // https://github.com/ydb-platform/ydb-go-sdk/issues/757
@@ -58,7 +58,7 @@ func TestDatabaseSqlContainers(t *testing.T) {
 					42 AS bar,
 					43 AS baz,
 				);
-		
+
 			$struct = AsStruct(
 				Uint32("0") as foo,
 				UTF8("x") as bar,
@@ -66,7 +66,7 @@ func TestDatabaseSqlContainers(t *testing.T) {
 			);
 			$variantStructType = VariantType(TypeOf($struct));
 			SELECT Variant(42, "baz", $variantStructType);
-		
+
 			$tuple = AsTuple(
 				Uint32("0"),
 				UTF8("x"),

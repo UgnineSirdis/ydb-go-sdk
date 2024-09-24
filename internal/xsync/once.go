@@ -4,7 +4,7 @@ import (
 	"context"
 	"sync"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
 )
 
 func OnceFunc(f func(ctx context.Context) error) func(ctx context.Context) error {

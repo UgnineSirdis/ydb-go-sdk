@@ -17,12 +17,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestBasicExampleDatabaseSql(t *testing.T) {
@@ -193,28 +193,28 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 				err = retry.Do(ctx, db, func(ctx context.Context, cc *sql.Conn) error {
 					stmt, err := cc.PrepareContext(ctx, `
 						PRAGMA TablePathPrefix("`+path.Join(nativeDriver.Name(), folder)+`");
-						
+
 						DECLARE $seriesData AS List<Struct<
 							series_id: Uint64,
 							title: Text,
 							series_info: Text,
 							release_date: Date,
 							comment: Optional<Text>>>;
-		
+
 						DECLARE $seasonsData AS List<Struct<
 							series_id: Uint64,
 							season_id: Uint64,
 							title: Text,
 							first_aired: Date,
 							last_aired: Date>>;
-		
+
 						DECLARE $episodesData AS List<Struct<
 							series_id: Uint64,
 							season_id: Uint64,
 							episode_id: Uint64,
 							title: Text,
 							air_date: Date>>;
-						
+
 						REPLACE INTO series SELECT * FROM AS_TABLE($seriesData);
 
 						REPLACE INTO seasons SELECT * FROM AS_TABLE($seasonsData);
@@ -246,11 +246,11 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 				DECLARE $seasonID AS Uint64;
 				DECLARE $episodeID AS Uint64;
 
-				SELECT views 
-				FROM episodes 
-				WHERE 
-					series_id = $seriesID AND 
-					season_id = $seasonID AND 
+				SELECT views
+				FROM episodes
+				WHERE
+					series_id = $seriesID AND
+					season_id = $seasonID AND
 					episode_id = $episodeID;`
 			t.Run("explain", func(t *testing.T) {
 				row := db.QueryRowContext(
@@ -294,12 +294,12 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 						// increment `views`
 						_, err = tx.ExecContext(ctx, `
 								PRAGMA TablePathPrefix("`+path.Join(nativeDriver.Name(), folder)+`");
-				
+
 								DECLARE $seriesID AS Uint64;
 								DECLARE $seasonID AS Uint64;
 								DECLARE $episodeID AS Uint64;
 								DECLARE $views AS Uint64;
-				
+
 								UPSERT INTO episodes ( series_id, season_id, episode_id, views )
 								VALUES ( $seriesID, $seasonID, $episodeID, $views );
 							`,
@@ -321,15 +321,15 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 					t.Run("snapshot", func(t *testing.T) {
 						query := `
 							PRAGMA TablePathPrefix("` + path.Join(nativeDriver.Name(), folder) + `");
-				
+
 							DECLARE $seriesID AS Uint64;
 							DECLARE $seasonID AS Uint64;
 							DECLARE $episodeID AS Uint64;
-			
-							SELECT views FROM episodes 
-							WHERE 
-								series_id = $seriesID AND 
-								season_id = $seasonID AND 
+
+							SELECT views FROM episodes
+							WHERE
+								series_id = $seriesID AND
+								season_id = $seasonID AND
 								episode_id = $episodeID;
 						`
 						err = retry.DoTx(ctx, db,
@@ -373,12 +373,12 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 							views     sql.NullFloat64
 							query     = `
 								PRAGMA TablePathPrefix("` + path.Join(nativeDriver.Name(), folder) + `");
-					
+
 								DECLARE $seriesID AS Optional<Uint64>;
 								DECLARE $seasonID AS Optional<Uint64>;
 								DECLARE $episodeID AS Optional<Uint64>;
-				
-								SELECT 
+
+								SELECT
 									series_id,
 									season_id,
 									episode_id,
@@ -386,11 +386,11 @@ func TestBasicExampleDatabaseSql(t *testing.T) {
 									air_date,
 									views
 								FROM episodes
-								WHERE 
+								WHERE
 									(series_id >= $seriesID OR $seriesID IS NULL) AND
 									(season_id >= $seasonID OR $seasonID IS NULL) AND
-									(episode_id >= $episodeID OR $episodeID IS NULL) 
-								ORDER BY 
+									(episode_id >= $episodeID OR $episodeID IS NULL)
+								ORDER BY
 									series_id, season_id, episode_id;
 							`
 						)

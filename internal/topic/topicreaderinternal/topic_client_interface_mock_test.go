@@ -10,7 +10,7 @@ import (
 	context "context"
 	reflect "reflect"
 
-	rawtopic "github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
+	rawtopic "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
 	gomock "go.uber.org/mock/gomock"
 )
 

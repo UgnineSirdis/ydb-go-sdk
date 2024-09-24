@@ -13,13 +13,13 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/indexed"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/indexed"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestLongStream(sourceTest *testing.T) {
@@ -122,9 +122,9 @@ func TestLongStream(sourceTest *testing.T) {
 								>>;
 								UPSERT INTO `+"`"+path.Join(db.Name(), folder, tableName)+"`"+`
 								SELECT
-									val 
+									val
 								FROM
-									AS_TABLE($values);            
+									AS_TABLE($values);
 							`, table.NewQueryParameters(
 									table.ValueParam(
 										"$values",

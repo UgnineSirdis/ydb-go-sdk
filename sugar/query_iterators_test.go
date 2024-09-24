@@ -9,10 +9,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	internalQuery "github.com/ydb-platform/ydb-go-sdk/v3/internal/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
+	internalQuery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
 )
 
 func TestUnmarshalRows(t *testing.T) {

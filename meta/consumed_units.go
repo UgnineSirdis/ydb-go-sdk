@@ -5,7 +5,7 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta"
 )
 
 func ConsumedUnits(md metadata.MD) (consumedUnits uint64) {

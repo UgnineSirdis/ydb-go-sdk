@@ -7,7 +7,7 @@ Healthcheck application provide check URLs and store results into YDB.
 ### Running as application
 
 ```bash
-git clone github.com/ydb-platform/ydb-go-sdk/v3 ydb-go-sdk
+git clone github.com/UgnineSirdis/ydb-go-sdk/v3 ydb-go-sdk
 cd ydb-go-sdk/examples/serverless/healthcheck
 go build -o healthcheck .
 YDB_SERVICE_ACCOUNT_KEY_FILE_CREDENTIALS=/path/to/sa/key/file \

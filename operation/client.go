@@ -9,11 +9,11 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation/metadata"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation/metadata"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 type (

@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	balancerConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
+	balancerConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
 )
 
 func TestFromConfig(t *testing.T) {

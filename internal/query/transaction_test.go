@@ -19,16 +19,16 @@ import (
 	grpcCodes "google.golang.org/grpc/codes"
 	grpcStatus "google.golang.org/grpc/status"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/params"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	internal "github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	baseTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/params"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	internal "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	baseTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/stats"
 )
 
 var _ baseTx.Transaction = &Transaction{}

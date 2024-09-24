@@ -7,8 +7,8 @@ import (
 	"os"
 
 	"github.com/golang-jwt/jwt/v4"
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/credentials"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/credentials"
 )
 
 var (

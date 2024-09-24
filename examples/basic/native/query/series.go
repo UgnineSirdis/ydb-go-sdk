@@ -9,9 +9,9 @@ import (
 	"path"
 	"time"
 
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
 )
 
 func read(ctx context.Context, c query.Client, prefix string) error {
@@ -74,7 +74,7 @@ func fillTablesWithData(ctx context.Context, c query.Client, prefix string) erro
 			series_info: Text,
 			release_date: Date,
 			comment: Optional<Text>>>;
-		
+
 		REPLACE INTO %s
 		SELECT
 			series_id,
@@ -159,7 +159,7 @@ func createTables(ctx context.Context, c query.Client, prefix string) error {
 			series_info Text,
 			release_date Date,
 			comment Text,
-			
+
 			PRIMARY KEY(series_id)
 		)`, "`"+path.Join(prefix, "series")+"`"),
 		query.WithTxControl(query.NoTx()),
@@ -175,7 +175,7 @@ func createTables(ctx context.Context, c query.Client, prefix string) error {
 			title Text,
 			first_aired Date,
 			last_aired Date,
-			
+
 			PRIMARY KEY(series_id,season_id)
 		)`, "`"+path.Join(prefix, "seasons")+"`"),
 		query.WithTxControl(query.NoTx()),
@@ -191,7 +191,7 @@ func createTables(ctx context.Context, c query.Client, prefix string) error {
 			episode_id Bytes,
 			title Text,
 			air_date Date,
-			
+
 			PRIMARY KEY(series_id,season_id,episode_id)
 		)`, "`"+path.Join(prefix, "episodes")+"`"),
 		query.WithTxControl(query.NoTx()),

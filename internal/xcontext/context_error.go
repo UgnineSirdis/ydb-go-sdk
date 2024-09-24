@@ -1,7 +1,7 @@
 package xcontext
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
 )
 
 var _ error = (*ctxError)(nil)

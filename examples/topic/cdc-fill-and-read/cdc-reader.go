@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicsugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicsugar"
 )
 
 func cdcRead(ctx context.Context, db *ydb.Driver, consumerName, topicPath string) {

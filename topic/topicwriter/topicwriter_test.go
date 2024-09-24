@@ -7,8 +7,8 @@ import (
 	"os"
 	"strings"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
 )
 
 func ExampleWriter_Write() {

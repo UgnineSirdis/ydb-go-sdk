@@ -10,10 +10,10 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 func TestTableCrossJoin(t *testing.T) {
@@ -89,14 +89,14 @@ func TestTableCrossJoin(t *testing.T) {
 		t.Run(tt.name, func(t *testing.T) {
 			query := `--!syntax_v1
 				PRAGMA TablePathPrefix("` + scope.Folder() + `");
-				
+
 				/* sub-query */` + tt.subQuery + `
 				/* query */
 				UPSERT INTO table2
 				SELECT d1.p1 AS p1,
 				FROM $data1 AS d1
 				CROSS JOIN AS_TABLE($data2) AS d2;
-		
+
 				SELECT COUNT(*) FROM $data1;
 			`
 

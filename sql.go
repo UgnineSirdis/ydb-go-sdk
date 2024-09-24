@@ -6,13 +6,13 @@ import (
 	"database/sql/driver"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/bind"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsql"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/bind"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsql"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var d = &sqlDriver{connectors: make(map[*xsql.Connector]*Driver)} //nolint:gochecknoglobals

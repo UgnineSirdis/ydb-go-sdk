@@ -19,14 +19,14 @@ import (
 	grpcStatus "google.golang.org/grpc/status"
 	"google.golang.org/protobuf/types/known/anypb"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/pool"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestClient(t *testing.T) {

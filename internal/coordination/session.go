@@ -12,11 +12,11 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Coordination"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination"
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/coordination/conversation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/coordination/conversation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type session struct {

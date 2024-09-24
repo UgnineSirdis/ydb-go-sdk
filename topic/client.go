@@ -3,12 +3,12 @@ package topic
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topiclistener"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topiclistener"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
 )
 
 // Client is interface for topic client

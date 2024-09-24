@@ -14,11 +14,11 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_TableStats"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stats"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestResultNextResultSet(t *testing.T) {

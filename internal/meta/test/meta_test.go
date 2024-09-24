@@ -7,11 +7,11 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials"
-	internal "github.com/ydb-platform/ydb-go-sdk/v3/internal/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/version"
-	"github.com/ydb-platform/ydb-go-sdk/v3/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials"
+	internal "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/version"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestMetaRequiredHeaders(t *testing.T) {

@@ -9,22 +9,22 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/pool"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 //go:generate mockgen -destination grpc_client_mock_test.go --typed -package query -write_package_comment=false github.com/ydb-platform/ydb-go-genproto/Ydb_Query_V1 QueryServiceClient,QueryService_AttachSessionClient,QueryService_ExecuteQueryClient
@@ -228,7 +228,7 @@ func (c *Client) Do(ctx context.Context, op query.Operation, opts ...options.DoO
 	var (
 		settings = options.ParseDoOpts(c.config.Trace(), opts...)
 		onDone   = trace.QueryOnDo(settings.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).Do"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).Do"),
 		)
 		attempts = 0
 	)
@@ -318,7 +318,7 @@ func (c *Client) QueryRow(ctx context.Context, q string, opts ...options.Execute
 	defer cancel()
 
 	onDone := trace.QueryOnQueryRow(c.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).QueryRow"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).QueryRow"),
 		q,
 	)
 	defer func() {
@@ -360,7 +360,7 @@ func (c *Client) Exec(ctx context.Context, q string, opts ...options.Execute) (f
 	defer cancel()
 
 	onDone := trace.QueryOnExec(c.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).Exec"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).Exec"),
 		q,
 	)
 	defer func() {
@@ -413,7 +413,7 @@ func (c *Client) Query(ctx context.Context, q string, opts ...options.Execute) (
 	defer cancel()
 
 	onDone := trace.QueryOnQuery(c.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).Query"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).Query"),
 		q,
 	)
 	defer func() {
@@ -459,7 +459,7 @@ func (c *Client) QueryResultSet(
 	defer cancel()
 
 	onDone := trace.QueryOnQueryResultSet(c.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).QueryResultSet"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).QueryResultSet"),
 		q,
 	)
 	defer func() {
@@ -481,7 +481,7 @@ func (c *Client) DoTx(ctx context.Context, op query.TxOperation, opts ...options
 	var (
 		settings = options.ParseDoTxOpts(c.config.Trace(), opts...)
 		onDone   = trace.QueryOnDoTx(settings.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Client).DoTx"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Client).DoTx"),
 		)
 		attempts = 0
 	)
@@ -513,7 +513,7 @@ func (c *Client) DoTx(ctx context.Context, op query.TxOperation, opts ...options
 
 func New(ctx context.Context, cc grpc.ClientConnInterface, cfg *config.Config) *Client {
 	onDone := trace.QueryOnNew(cfg.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.New"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.New"),
 	)
 	defer onDone()
 

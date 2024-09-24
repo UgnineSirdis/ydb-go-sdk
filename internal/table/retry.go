@@ -3,14 +3,14 @@ package table
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/pool"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/table/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/table/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // sessionPool is the interface that holds session lifecycle logic.

@@ -15,13 +15,13 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/version"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/version"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
 )
 
 const defaultConnectionString = "grpc://localhost:2136/local"

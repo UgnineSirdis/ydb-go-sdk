@@ -5,8 +5,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicwriter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
 )
 
 func TestWriterImpl_CreateInitMessage(t *testing.T) {

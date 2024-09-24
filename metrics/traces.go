@@ -1,7 +1,7 @@
 package metrics
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
 )
 
 func WithTraces(config Config) ydb.Option {

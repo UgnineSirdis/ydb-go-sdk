@@ -4,9 +4,9 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	grpcCodes "google.golang.org/grpc/codes"
 
-	ratelimiterErrors "github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter/errors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/ratelimiter"
+	ratelimiterErrors "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter/errors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/ratelimiter"
 )
 
 // IterateByIssues helps to iterate over internal issues of operation error.

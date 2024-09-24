@@ -3,8 +3,8 @@ package params
 import (
 	"strconv"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/pg"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/value"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pg"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/value"
 )
 
 type pgParam struct {

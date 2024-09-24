@@ -1,6 +1,6 @@
 # Migration from `ydb-go-sdk/v2` to `ydb-go-sdk/v3` with `database/sql` API driver usages
 
-> Article contains some cases for migrate from `github.com/yandex-cloud/ydb-go-sdk/v2/ydbsql` to `github.com/ydb-platform/ydb-go-sdk/v3`
+> Article contains some cases for migrate from `github.com/yandex-cloud/ydb-go-sdk/v2/ydbsql` to `github.com/UgnineSirdis/ydb-go-sdk/v3`
 
 > Note: the article is being updated.
 
@@ -12,7 +12,7 @@ Package `database/sql` provides two ways for making driver:
 
 Second way (making driver from connector) are different in `v2` and `v3`:
 - in `v2`:
-  `ydbsql.Connector` returns single result (`sql.driver.Connector`) and init driver lazy on first request. This design causes rare errors. 
+  `ydbsql.Connector` returns single result (`sql.driver.Connector`) and init driver lazy on first request. This design causes rare errors.
   ```go
   db := sql.OpenDB(ydbsql.Connector(
     ydbsql.WithDialer(dialer),
@@ -46,4 +46,4 @@ In `ydb-go-sdk/v2/ydbsql` was allowed `sql.LevelReadCommitted` and `sql.LevelRea
 Transaction controls `OnlineReadOnly` and `StaleReadOnly` will deprecate in the future.
 
 That's why `ydb-go-sdk/v3` allowed only `sql.LevelSnapshot` for read-only interactive transactions. Currently, snapshot isolation implements over `fake` transaction with true `OnlineReadOnly` transaction control on each request inside transaction.
-YDB implements snapshot isolation, but this feature is not deployed on YDB clusters now. After full deploying on each YDB cluster fake transaction will be replaced to true read-only interactive transaction with snapshot isolation level.  
+YDB implements snapshot isolation, but this feature is not deployed on YDB clusters now. After full deploying on each YDB cluster fake transaction will be replaced to true read-only interactive transaction with snapshot isolation level.

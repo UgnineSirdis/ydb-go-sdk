@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicsugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicsugar"
 	firestore "google.golang.org/genproto/firestore/bundle"
 )
 

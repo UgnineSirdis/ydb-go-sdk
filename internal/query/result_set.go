@@ -8,11 +8,11 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
 )
 
 var (

@@ -7,9 +7,9 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"google.golang.org/protobuf/types/known/structpb"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/value"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/value"
 )
 
 func TestUnwrapOptionalValue(t *testing.T) {

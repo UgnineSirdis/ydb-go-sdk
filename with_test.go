@@ -16,9 +16,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/certificates"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/certificates"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
 )
 
 func TestWithCertificatesCached(t *testing.T) {

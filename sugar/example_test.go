@@ -4,8 +4,8 @@ import (
 	"context"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
 )
 
 func Example_unmarshallRow() {

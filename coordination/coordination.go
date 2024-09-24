@@ -6,8 +6,8 @@ import (
 	"math"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
 )
 
 type Client interface {

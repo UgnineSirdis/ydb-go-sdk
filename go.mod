@@ -1,4 +1,4 @@
-module github.com/ydb-platform/ydb-go-sdk/v3
+module github.com/UgnineSirdis/ydb-go-sdk/v3
 
 go 1.21
 

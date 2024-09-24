@@ -1,6 +1,6 @@
 package topicwriterinternal
 
-import "github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
+import "github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
 
 type PublicWithOnWriterConnectedInfo struct {
 	LastSeqNo        int64

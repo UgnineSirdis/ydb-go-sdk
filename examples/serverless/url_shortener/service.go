@@ -22,13 +22,13 @@ import (
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 	environ "github.com/ydb-platform/ydb-go-sdk-auth-environ"
 	ydbMetrics "github.com/ydb-platform/ydb-go-sdk-prometheus/v2"
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 //go:embed static/index.html

@@ -16,8 +16,8 @@ import (
 	grpcCredentials "google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/credentials/insecure"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/credentials"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/credentials"
 )
 
 func TestDatabaseSqlStaticCredentials(t *testing.T) {

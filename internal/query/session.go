@@ -5,14 +5,14 @@ import (
 
 	"github.com/ydb-platform/ydb-go-genproto/Ydb_Query_V1"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	baseTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	baseTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var _ query.Session = (*Session)(nil)
@@ -31,7 +31,7 @@ func (s *Session) QueryResultSet(
 	ctx context.Context, q string, opts ...options.Execute,
 ) (rs result.ClosableResultSet, finalErr error) {
 	onDone := trace.QueryOnSessionQueryResultSet(s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Session).QueryResultSet"), s, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Session).QueryResultSet"), s, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -67,7 +67,7 @@ func (s *Session) queryRow(
 
 func (s *Session) QueryRow(ctx context.Context, q string, opts ...options.Execute) (_ query.Row, finalErr error) {
 	onDone := trace.QueryOnSessionQueryRow(s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Session).QueryRow"), s, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Session).QueryRow"), s, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -102,7 +102,7 @@ func (s *Session) Begin(
 	tx query.Transaction, finalErr error,
 ) {
 	onDone := trace.QueryOnSessionBegin(s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Session).Begin"), s)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Session).Begin"), s)
 	defer func() {
 		if finalErr != nil {
 			onDone(finalErr, nil)
@@ -133,7 +133,7 @@ func (s *Session) Exec(
 	ctx context.Context, q string, opts ...options.Execute,
 ) (finalErr error) {
 	onDone := trace.QueryOnSessionExec(s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Session).Exec"), s, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Session).Exec"), s, q)
 	defer func() {
 		onDone(finalErr)
 	}()
@@ -155,7 +155,7 @@ func (s *Session) Query(
 	ctx context.Context, q string, opts ...options.Execute,
 ) (_ query.Result, finalErr error) {
 	onDone := trace.QueryOnSessionQuery(s.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query.(*Session).Query"), s, q)
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query.(*Session).Query"), s, q)
 	defer func() {
 		onDone(finalErr)
 	}()

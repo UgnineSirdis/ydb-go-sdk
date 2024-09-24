@@ -1,7 +1,7 @@
 package stats
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stats"
 )
 
 // QueryPhase holds query execution phase statistics.

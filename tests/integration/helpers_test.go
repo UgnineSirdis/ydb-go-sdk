@@ -19,19 +19,19 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/log"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicreader"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicwriter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/log"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicreader"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type scopeT struct {
@@ -310,7 +310,7 @@ func (scope *scopeT) TableName(opts ...func(t *tableNameParams)) string {
 		createTableQueryTemplate: `
 			PRAGMA TablePathPrefix("{{.TablePathPrefix}}");
 			CREATE TABLE {{.TableName}} (
-				id Int64 NOT NULL, 
+				id Int64 NOT NULL,
 				val Text,
 				PRIMARY KEY (id)
 			)

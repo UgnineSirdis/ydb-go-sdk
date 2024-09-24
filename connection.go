@@ -3,13 +3,13 @@ package ydb
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination"
-	"github.com/ydb-platform/ydb-go-sdk/v3/discovery"
-	"github.com/ydb-platform/ydb-go-sdk/v3/ratelimiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scripting"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/discovery"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/ratelimiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scripting"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic"
 )
 
 // Connection interface provide access to YDB service clients

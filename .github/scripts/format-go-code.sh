@@ -14,7 +14,7 @@ elif [[ "$FILEPATH" == *"examples/"* ]]
 then
   gci write --skip-generated -s standard -s default -s "prefix(examples)" "$FILEPATH"
 else
-  gci write --skip-generated -s standard -s default -s "prefix(github.com/ydb-platform/ydb-go-sdk/v3)" "$FILEPATH"
+  gci write --skip-generated -s standard -s default -s "prefix(github.com/UgnineSirdis/ydb-go-sdk/v3)" "$FILEPATH"
 fi
 
 

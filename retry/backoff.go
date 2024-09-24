@@ -3,7 +3,7 @@ package retry
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
 )
 
 // Backoff makes backoff object with custom params

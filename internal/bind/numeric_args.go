@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"unicode/utf8"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/params"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xstring"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/params"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xstring"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
 )
 
 type NumericArgs struct{}

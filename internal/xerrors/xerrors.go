@@ -8,7 +8,7 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	grpcCodes "google.golang.org/grpc/codes"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
 )
 
 // Error is an interface of error which reports about error code and error name.

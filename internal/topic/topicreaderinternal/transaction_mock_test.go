@@ -3,8 +3,8 @@ package topicreaderinternal
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
 )
 
 func newMockTransactionWrapper(sessionID, transactinID string) *mockTransaction {

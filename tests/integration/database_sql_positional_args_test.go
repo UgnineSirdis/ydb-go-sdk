@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 func TestDatabaseSqlPositionalArgs(t *testing.T) {
@@ -25,11 +25,11 @@ func TestDatabaseSqlPositionalArgs(t *testing.T) {
 	var row *sql.Row
 	err := retry.Retry(scope.Ctx, func(ctx context.Context) (err error) {
 		row = db.QueryRowContext(ctx, `
-			SELECT 
+			SELECT
 				? AS vInt,
 				? AS vText,
 				? AS vDouble,
-				? AS vDateTime 
+				? AS vDateTime
 			`, 1, "2", 3.0, dt,
 		)
 		return row.Err()

@@ -7,7 +7,7 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 func TestCtxErrError(t *testing.T) {
@@ -17,7 +17,7 @@ func TestCtxErrError(t *testing.T) {
 	}{
 		{
 			err: errAt(context.Canceled, 0),
-			str: "'context canceled' at `github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext.TestCtxErrError(context_error_test.go:19)`", //nolint:lll
+			str: "'context canceled' at `github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext.TestCtxErrError(context_error_test.go:19)`", //nolint:lll
 		},
 		{
 			err: errFrom(context.DeadlineExceeded, "some.go"),

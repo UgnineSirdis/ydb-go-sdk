@@ -7,12 +7,12 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/balancers"
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/mock"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/balancers"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/mock"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
 )
 
 var localIP = net.IPv4(127, 0, 0, 1)

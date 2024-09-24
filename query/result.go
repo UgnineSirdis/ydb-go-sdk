@@ -1,9 +1,9 @@
 package query
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/scanner"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
 )
 
 type (

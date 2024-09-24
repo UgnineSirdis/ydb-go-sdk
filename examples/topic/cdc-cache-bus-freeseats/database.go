@@ -8,10 +8,10 @@ import (
 	"path"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
 )
 
 func createTableAndCDC(ctx context.Context, db *ydb.Driver, consumersCount int) {
@@ -42,7 +42,7 @@ func createTables(ctx context.Context, db *ydb.Driver) error {
 	_, err = db.Scripting().Execute(ctx, `
 CREATE TABLE bus (id Text, freeSeats Int64, PRIMARY KEY(id));
 
-ALTER TABLE 
+ALTER TABLE
 	bus
 ADD CHANGEFEED
 	updates

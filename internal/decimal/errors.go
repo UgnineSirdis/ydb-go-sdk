@@ -3,7 +3,7 @@ package decimal
 import (
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 var errSyntax = xerrors.Wrap(fmt.Errorf("invalid syntax"))

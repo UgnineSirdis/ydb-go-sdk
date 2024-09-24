@@ -9,15 +9,15 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Query"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	balancerContext "github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/pool"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	balancerContext "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type (
@@ -115,7 +115,7 @@ func Open(
 	}
 
 	onDone := trace.QueryOnSessionCreate(core.Trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session.Open"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session.Open"),
 	)
 	defer func() {
 		if finalErr == nil {
@@ -155,7 +155,7 @@ func Open(
 
 func (c *core) attach(ctx context.Context) (finalErr error) {
 	onDone := trace.QueryOnSessionAttach(c.Trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session.(*core).attach"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session.(*core).attach"),
 		c,
 	)
 	defer func() {
@@ -223,7 +223,7 @@ func (c *core) closeAndDelete(cancelAttach context.CancelFunc) func(ctx context.
 
 func (c *core) deleteSession(ctx context.Context) (finalErr error) {
 	onDone := trace.QueryOnSessionDelete(c.Trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/query/session.(*core).deleteSession"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/session.(*core).deleteSession"),
 		c,
 	)
 	defer func() {

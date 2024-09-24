@@ -1,6 +1,6 @@
 package result
 
-import "github.com/ydb-platform/ydb-go-sdk/v3/table/options"
+import "github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
 
 type Set interface {
 	// ColumnCount returns number of columns in the current result set.

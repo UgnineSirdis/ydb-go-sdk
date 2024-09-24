@@ -4,9 +4,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/decimal"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/value"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/decimal"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/value"
 )
 
 // RawValue scanning non-primitive yql types or for own implementation scanner native API

@@ -8,8 +8,8 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
 )
 
 func TestEventBroadcast(t *testing.T) {

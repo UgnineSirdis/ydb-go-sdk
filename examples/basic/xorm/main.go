@@ -7,7 +7,7 @@ import (
 	"time"
 
 	_ "github.com/lib/pq"
-	_ "github.com/ydb-platform/ydb-go-sdk/v3"
+	_ "github.com/UgnineSirdis/ydb-go-sdk/v3"
 	_ "modernc.org/sqlite"
 	"xorm.io/builder"
 	"xorm.io/xorm"

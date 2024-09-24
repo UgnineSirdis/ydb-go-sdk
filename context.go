@@ -4,7 +4,7 @@ import (
 	"context"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
 )
 
 // WithOperationTimeout returns a copy of parent context in which YDB operation timeout

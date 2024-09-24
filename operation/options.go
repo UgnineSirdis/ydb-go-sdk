@@ -1,7 +1,7 @@
 package operation
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation/options"
 )
 
 func WithPageSize(pageSize uint64) options.List {

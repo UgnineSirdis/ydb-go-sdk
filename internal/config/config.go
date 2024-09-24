@@ -3,8 +3,8 @@ package config
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry/budget"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry/budget"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var defaultRetryBudget = budget.Limited(-1)

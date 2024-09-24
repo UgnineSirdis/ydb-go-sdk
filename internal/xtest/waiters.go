@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
 )
 
 const commonWaitTimeout = time.Second

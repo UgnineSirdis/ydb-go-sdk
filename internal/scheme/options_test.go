@@ -5,7 +5,7 @@ import (
 
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Scheme"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
 )
 
 func TestSchemeOptions(t *testing.T) {

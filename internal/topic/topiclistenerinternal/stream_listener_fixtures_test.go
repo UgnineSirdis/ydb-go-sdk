@@ -8,9 +8,9 @@ import (
 	"github.com/rekby/fixenv/sf"
 	"go.uber.org/mock/gomock"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreadermock"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicreadermock"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func StreamListener(e fixenv.Env) *streamListener {

@@ -5,9 +5,9 @@ import (
 	"log"
 	"sync"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topiclistener"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topiclistener"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
 )
 
 func StartReader(ctx context.Context, db *ydb.Driver) (*topiclistener.TopicListener, error) {

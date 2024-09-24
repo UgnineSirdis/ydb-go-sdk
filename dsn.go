@@ -6,12 +6,12 @@ import (
 	"regexp"
 	"strings"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/balancers"
-	"github.com/ydb-platform/ydb-go-sdk/v3/credentials"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/bind"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/dsn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsql"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/balancers"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/credentials"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/bind"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/dsn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsql"
 )
 
 const tablePathPrefixTransformer = "table_path_prefix"

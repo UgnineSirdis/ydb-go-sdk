@@ -3,7 +3,7 @@ package topicreaderinternal
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
 )
 
 // PublicGetPartitionStartOffsetResponse allow to set start offset for read messages for the partition

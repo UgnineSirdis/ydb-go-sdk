@@ -1,7 +1,7 @@
 package xerrors
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
 )
 
 // Check returns retry mode for err.

@@ -3,7 +3,7 @@ package table
 import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Table"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
 )
 
 func NewTimeToLiveSettings(settings *Ydb_Table.TtlSettings) *options.TimeToLiveSettings {

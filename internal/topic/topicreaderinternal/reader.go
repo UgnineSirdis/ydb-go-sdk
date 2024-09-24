@@ -6,13 +6,13 @@ import (
 	"fmt"
 	"sync"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/credentials"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/credentials"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var (

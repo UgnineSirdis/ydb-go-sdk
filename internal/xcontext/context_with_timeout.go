@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
 )
 
 func WithTimeout(ctx context.Context, t time.Duration) (context.Context, context.CancelFunc) {

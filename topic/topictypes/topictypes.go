@@ -3,9 +3,9 @@ package topictypes
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/clone"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/clone"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
 )
 
 // Codec code for use in topics

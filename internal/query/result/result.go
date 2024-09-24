@@ -3,10 +3,10 @@ package result
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/scanner"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 type (

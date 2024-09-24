@@ -1,7 +1,7 @@
 package xsql
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scanner"
 )
 
 type valuer struct {

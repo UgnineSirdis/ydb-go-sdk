@@ -1,8 +1,8 @@
 package retry
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 // retryMode reports whether operation is able retried and with which properties.

@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry/budget"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry/budget"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // retryOperation is the interface that holds an operation for retry.
@@ -292,7 +292,7 @@ func RetryWithResult[T any](ctx context.Context, //nolint:revive,funlen
 	var (
 		zeroValue T
 		options   = &retryOptions{
-			call:        stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/retry.RetryWithResult"),
+			call:        stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/retry.RetryWithResult"),
 			trace:       &trace.Retry{},
 			budget:      budget.Limited(-1),
 			fastBackoff: backoff.Fast,

@@ -9,13 +9,13 @@ import (
 	"google.golang.org/grpc"
 	grpcCodes "google.golang.org/grpc/codes"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type connsKey struct {
@@ -114,7 +114,7 @@ func (p *Pool) Ban(ctx context.Context, cc Conn, cause error) {
 
 	trace.DriverOnConnBan(
 		p.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/conn.(*Pool).Ban"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn.(*Pool).Ban"),
 		e, cc.GetState(), cause,
 	)(cc.SetState(ctx, Banned))
 }
@@ -136,7 +136,7 @@ func (p *Pool) Allow(ctx context.Context, cc Conn) {
 
 	trace.DriverOnConnAllow(
 		p.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/conn.(*Pool).Allow"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn.(*Pool).Allow"),
 		e, cc.GetState(),
 	)(cc.Unban(ctx))
 }
@@ -149,7 +149,7 @@ func (p *Pool) Take(context.Context) error {
 
 func (p *Pool) Release(ctx context.Context) (finalErr error) {
 	onDone := trace.DriverOnPoolRelease(p.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/conn.(*Pool).Release"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn.(*Pool).Release"),
 	)
 	defer func() {
 		onDone(finalErr)
@@ -233,7 +233,7 @@ func (p *Pool) collectConns() []*conn {
 
 func NewPool(ctx context.Context, config Config) *Pool {
 	onDone := trace.DriverOnPoolNew(config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/conn.NewPool"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn.NewPool"),
 	)
 	defer onDone()
 

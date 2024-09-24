@@ -1,9 +1,9 @@
 package topicoptions
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topictypes"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topictypes"
 )
 
 // ListenerOption set settings for topic listener struct

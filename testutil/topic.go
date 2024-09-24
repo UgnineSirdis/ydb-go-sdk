@@ -1,7 +1,7 @@
 package testutil
 
 import (
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
 )
 
 type TopicReaderMessageBuilder = topicreadercommon.PublicMessageBuilder

@@ -11,7 +11,7 @@ import (
 	"os"
 	"path/filepath"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/cmd/gstack/utils"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/cmd/gstack/utils"
 )
 
 func usage() {

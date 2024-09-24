@@ -5,10 +5,10 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawoptional"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawscheme"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawoptional"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawscheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
 )
 
 func TestTopicDescriptionFromRaw(t *testing.T) {

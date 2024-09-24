@@ -9,8 +9,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 func TestDatabaseSqlDiscardColumn(t *testing.T) {
@@ -25,11 +25,11 @@ func TestDatabaseSqlDiscardColumn(t *testing.T) {
 	var row *sql.Row
 	err := retry.Retry(scope.Ctx, func(ctx context.Context) (err error) {
 		row = db.QueryRowContext(ctx, `
-			SELECT 
+			SELECT
 				$1 AS vInt,
 				$2 AS __discard_column_1,
 				$3 AS __discard_column_2,
-				$4 AS __discard_column_3 
+				$4 AS __discard_column_3
 			`, 1, "2", 3.0, dt,
 		)
 		return row.Err()

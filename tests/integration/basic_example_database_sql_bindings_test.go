@@ -17,12 +17,12 @@ import (
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func TestBasicExampleDatabaseSqlBindings(t *testing.T) {
@@ -280,10 +280,10 @@ func TestBasicExampleDatabaseSqlBindings(t *testing.T) {
 				t.Run("isolation", func(t *testing.T) {
 					t.Run("snapshot", func(t *testing.T) {
 						query := `
-							SELECT views FROM episodes 
-							WHERE 
-								series_id = ? AND 
-								season_id = ? AND 
+							SELECT views FROM episodes
+							WHERE
+								series_id = ? AND
+								season_id = ? AND
 								episode_id = ?;
 						`
 						err = retry.DoTx(ctx, db,
@@ -326,7 +326,7 @@ func TestBasicExampleDatabaseSqlBindings(t *testing.T) {
 							airDate   *time.Time
 							views     sql.NullFloat64
 							query     = `
-								SELECT 
+								SELECT
 									series_id,
 									season_id,
 									episode_id,
@@ -334,11 +334,11 @@ func TestBasicExampleDatabaseSqlBindings(t *testing.T) {
 									air_date,
 									views
 								FROM episodes
-								WHERE 
+								WHERE
 									(series_id >= ? OR ? IS NULL) AND
 									(season_id >= ? OR ? IS NULL) AND
-									(episode_id >= ? OR ? IS NULL) 
-								ORDER BY 
+									(episode_id >= ? OR ? IS NULL)
+								ORDER BY
 									series_id, season_id, episode_id;
 							`
 						)

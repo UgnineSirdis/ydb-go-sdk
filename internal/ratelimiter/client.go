@@ -10,13 +10,13 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_RateLimiter"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter/config"
-	ratelimiterErrors "github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter/errors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/ratelimiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter/config"
+	ratelimiterErrors "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter/errors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/ratelimiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 var (

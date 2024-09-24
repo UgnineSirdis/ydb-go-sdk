@@ -3,7 +3,7 @@ package xsync
 import (
 	"sync"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
 )
 
 // EventBroadcast is implementation of broadcast notify about event

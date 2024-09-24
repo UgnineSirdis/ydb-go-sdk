@@ -3,9 +3,9 @@ package topiclistener
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 type TopicListener struct {

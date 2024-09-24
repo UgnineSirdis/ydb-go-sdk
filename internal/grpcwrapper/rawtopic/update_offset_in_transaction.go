@@ -3,8 +3,8 @@ package rawtopic
 import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Topic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawydb"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawydb"
 )
 
 type UpdateOffsetsInTransactionRequest struct {

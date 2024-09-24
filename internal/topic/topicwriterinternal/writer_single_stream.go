@@ -7,13 +7,13 @@ import (
 	"reflect"
 	"sync/atomic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/background"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/empty"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicwriter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/background"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/empty"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopiccommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/grpcwrapper/rawtopic/rawtopicwriter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var errSingleStreamWriterDoubleClose = xerrors.Wrap(errors.New("ydb: single stream writer impl double closed"))
@@ -289,7 +289,7 @@ func (w *SingleStreamWriter) sendUpdateToken(ctx context.Context) (err error) {
 	return stream.Send(req)
 }
 
-//go:generate mockgen -destination raw_topic_writer_stream_mock_test.go --typed -package topicwriterinternal -write_package_comment=false github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicwriterinternal RawTopicWriterStream
+//go:generate mockgen -destination raw_topic_writer_stream_mock_test.go --typed -package topicwriterinternal -write_package_comment=false github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicwriterinternal RawTopicWriterStream
 
 type RawTopicWriterStream interface {
 	Recv() (rawtopicwriter.ServerMessage, error)

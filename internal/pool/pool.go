@@ -8,12 +8,12 @@ import (
 
 	"github.com/jonboulle/clockwork"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xlist"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xlist"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 
 type (
@@ -153,7 +153,7 @@ func New[PT ItemConstraint[T], T any](
 
 	if onNew := p.config.trace.OnNew; onNew != nil {
 		onDone := onNew(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.New"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.New"),
 		)
 		if onDone != nil {
 			defer func() {
@@ -317,7 +317,7 @@ func (p *Pool[PT, T]) changeState(changeState func() Stats) {
 func (p *Pool[PT, T]) try(ctx context.Context, f func(ctx context.Context, item PT) error) (finalErr error) {
 	if onTry := p.config.trace.OnTry; onTry != nil {
 		onDone := onTry(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.(*Pool).try"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.(*Pool).try"),
 		)
 		if onDone != nil {
 			defer func() {
@@ -364,7 +364,7 @@ func (p *Pool[PT, T]) With(
 
 	if onWith := p.config.trace.OnWith; onWith != nil {
 		onDone := onWith(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.(*Pool).With"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.(*Pool).With"),
 		)
 		if onDone != nil {
 			defer func() {
@@ -392,7 +392,7 @@ func (p *Pool[PT, T]) With(
 func (p *Pool[PT, T]) Close(ctx context.Context) (finalErr error) {
 	if onClose := p.config.trace.OnClose; onClose != nil {
 		onDone := onClose(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.(*Pool).Close"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.(*Pool).Close"),
 		)
 		if onDone != nil {
 			defer func() {
@@ -576,7 +576,7 @@ func (p *Pool[PT, T]) getItem(ctx context.Context) (item PT, finalErr error) { /
 
 	if onGet := p.config.trace.OnGet; onGet != nil {
 		onDone := onGet(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.(*Pool).getItem"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.(*Pool).getItem"),
 		)
 		if onDone != nil {
 			defer func() {
@@ -748,7 +748,7 @@ func (p *Pool[PT, T]) waitFromCh(ctx context.Context) (item PT, finalErr error) 
 func (p *Pool[PT, T]) putItem(ctx context.Context, item PT) (finalErr error) {
 	if onPut := p.config.trace.OnPut; onPut != nil {
 		onDone := onPut(&ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/pool.(*Pool).putItem"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/pool.(*Pool).putItem"),
 			item,
 		)
 		if onDone != nil {

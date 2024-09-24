@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"os"
 
-	ydb "github.com/ydb-platform/ydb-go-sdk/v3"
+	ydb "github.com/UgnineSirdis/ydb-go-sdk/v3"
 )
 
 var dsn string

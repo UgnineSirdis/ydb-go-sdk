@@ -5,10 +5,10 @@ import (
 	"errors"
 	"io"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/query/scanner"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/indexed"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/indexed"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
 )
 
 type result struct {

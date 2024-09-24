@@ -6,9 +6,9 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/bind"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsql"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/bind"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsql"
 )
 
 func TestParse(t *testing.T) {

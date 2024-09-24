@@ -3,7 +3,7 @@ package log
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // Discovery makes trace.Discovery with logging events from details

@@ -10,20 +10,20 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_TableStats"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/allocator"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/params"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/table/scanner"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scripting"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/allocator"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/params"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/table/scanner"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scripting"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 //nolint:gofumpt
@@ -73,7 +73,7 @@ func (c *Client) execute(
 ) (r result.Result, err error) {
 	var (
 		onDone = trace.ScriptingOnExecute(c.config.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting.(*Client).execute"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting.(*Client).execute"),
 			query, parameters,
 		)
 		a       = allocator.New()
@@ -153,7 +153,7 @@ func (c *Client) explain(
 ) (e table.ScriptingYQLExplanation, err error) {
 	var (
 		onDone = trace.ScriptingOnExplain(c.config.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting.(*Client).explain"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting.(*Client).explain"),
 			query,
 		)
 		request = &Ydb_Scripting.ExplainYqlRequest{
@@ -229,7 +229,7 @@ func (c *Client) streamExecute(
 ) (r result.StreamResult, err error) {
 	var (
 		onIntermediate = trace.ScriptingOnStreamExecute(c.config.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting.(*Client).streamExecute"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting.(*Client).streamExecute"),
 			query, parameters,
 		)
 		a       = allocator.New()
@@ -297,7 +297,7 @@ func (c *Client) Close(ctx context.Context) (err error) {
 		return xerrors.WithStackTrace(errNilClient)
 	}
 	onDone := trace.ScriptingOnClose(c.config.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting.(*Client).Close"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting.(*Client).Close"),
 	)
 	defer func() {
 		onDone(err)

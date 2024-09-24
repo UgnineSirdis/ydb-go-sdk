@@ -5,7 +5,7 @@ import (
 	"runtime/pprof"
 	"testing"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
 )
 
 func Context(t testing.TB) context.Context {

@@ -9,18 +9,18 @@ import (
 
 	"github.com/jonboulle/clockwork"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/bind"
-	metaHeaders "github.com/ydb-platform/ydb-go-sdk/v3/internal/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry/budget"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scripting"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/options"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/bind"
+	metaHeaders "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry/budget"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scripting"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/options"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type ConnectorOption interface {
@@ -333,7 +333,7 @@ func (c *Connector) Connect(ctx context.Context) (_ driver.Conn, err error) {
 	var (
 		onDone = trace.DatabaseSQLOnConnectorConnect(
 			c.trace, &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/xsql.(*Connector).Connect"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsql.(*Connector).Connect"),
 		)
 		session table.ClosableSession
 	)

@@ -9,9 +9,9 @@ import (
 	"io"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	baseTx "github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	baseTx "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
 )
 
 func Example_queryWithMaterializedResult() {

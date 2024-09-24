@@ -3,7 +3,7 @@ package metrics
 import (
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 func retry(config Config) (t trace.Retry) {

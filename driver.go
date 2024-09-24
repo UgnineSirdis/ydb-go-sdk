@@ -9,43 +9,43 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/coordination"
-	"github.com/ydb-platform/ydb-go-sdk/v3/discovery"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	internalCoordination "github.com/ydb-platform/ydb-go-sdk/v3/internal/coordination"
-	coordinationConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/coordination/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials"
-	internalDiscovery "github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery"
-	discoveryConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/dsn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	internalQuery "github.com/ydb-platform/ydb-go-sdk/v3/internal/query"
-	queryConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/query/config"
-	internalRatelimiter "github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter"
-	ratelimiterConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/ratelimiter/config"
-	internalScheme "github.com/ydb-platform/ydb-go-sdk/v3/internal/scheme"
-	schemeConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/scheme/config"
-	internalScripting "github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting"
-	scriptingConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/scripting/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	internalTable "github.com/ydb-platform/ydb-go-sdk/v3/internal/table"
-	tableConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/table/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicclientinternal"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsql"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/log"
-	"github.com/ydb-platform/ydb-go-sdk/v3/operation"
-	"github.com/ydb-platform/ydb-go-sdk/v3/ratelimiter"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scheme"
-	"github.com/ydb-platform/ydb-go-sdk/v3/scripting"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic"
-	"github.com/ydb-platform/ydb-go-sdk/v3/topic/topicoptions"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/coordination"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/discovery"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	internalCoordination "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/coordination"
+	coordinationConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/coordination/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials"
+	internalDiscovery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery"
+	discoveryConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/dsn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	internalQuery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query"
+	queryConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/query/config"
+	internalRatelimiter "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter"
+	ratelimiterConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/ratelimiter/config"
+	internalScheme "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scheme"
+	schemeConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scheme/config"
+	internalScripting "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting"
+	scriptingConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/scripting/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	internalTable "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/table"
+	tableConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/table/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicclientinternal"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsql"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/log"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/operation"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/ratelimiter"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scheme"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/scripting"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/topic/topicoptions"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var _ Connection = (*Driver)(nil)
@@ -118,7 +118,7 @@ func (d *Driver) trace() *trace.Driver {
 //nolint:nonamedreturns
 func (d *Driver) Close(ctx context.Context) (finalErr error) {
 	onDone := trace.DriverOnClose(d.trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/ydb.(*Driver).Close"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/ydb.(*Driver).Close"),
 	)
 	defer func() {
 		onDone(finalErr)
@@ -266,7 +266,7 @@ func Open(ctx context.Context, dsn string, opts ...Option) (_ *Driver, _ error) 
 
 	onDone := trace.DriverOnInit(
 		d.trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/ydb.Open"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/ydb.Open"),
 		d.config.Endpoint(), d.config.Database(), d.config.Secure(),
 	)
 	defer func() {
@@ -306,7 +306,7 @@ func New(ctx context.Context, opts ...Option) (_ *Driver, err error) { //nolint:
 
 	onDone := trace.DriverOnInit(
 		d.trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/ydb.New"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/ydb.New"),
 		d.config.Endpoint(), d.config.Database(), d.config.Secure(),
 	)
 	defer func() {

@@ -4,9 +4,9 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var nextID atomic.Uint64 //nolint:gochecknoglobals
@@ -49,7 +49,7 @@ func (d *Driver) With(ctx context.Context, opts ...Option) (*Driver, error) {
 
 	onDone := trace.DriverOnWith(
 		d.trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/ydb.(*Driver).With"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/ydb.(*Driver).With"),
 		d.config.Endpoint(), d.config.Database(), d.config.Secure(),
 	)
 	defer func() {

@@ -3,9 +3,9 @@ package result
 import (
 	"context"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/indexed"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/result/named"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/stats"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/indexed"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/result/named"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/stats"
 )
 
 // BaseResult is a result of a query.

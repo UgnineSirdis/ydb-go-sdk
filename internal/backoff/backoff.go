@@ -4,7 +4,7 @@ import (
 	"math"
 	"time"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xrand"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xrand"
 )
 
 // Backoff is the interface that contains logic of delaying operation retry.

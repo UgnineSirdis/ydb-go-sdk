@@ -11,12 +11,12 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Discovery"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/discovery"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/discovery"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 //go:generate mockgen -destination grpc_client_mock_test.go --typed -package discovery -write_package_comment=false github.com/ydb-platform/ydb-go-genproto/Ydb_Discovery_V1 DiscoveryServiceClient
@@ -93,7 +93,7 @@ func (c *Client) Discover(ctx context.Context) (endpoints []endpoint.Endpoint, f
 	var (
 		onDone = trace.DiscoveryOnDiscover(
 			c.config.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery.(*Client).Discover"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery.(*Client).Discover"),
 			c.config.Endpoint(), c.config.Database(),
 		)
 		location string
@@ -122,7 +122,7 @@ func (c *Client) Discover(ctx context.Context) (endpoints []endpoint.Endpoint, f
 func (c *Client) WhoAmI(ctx context.Context) (whoAmI *discovery.WhoAmI, err error) {
 	var (
 		onDone = trace.DiscoveryOnWhoAmI(c.config.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery.(*Client).WhoAmI"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery.(*Client).WhoAmI"),
 		)
 		request            = Ydb_Discovery.WhoAmIRequest{}
 		response           *Ydb_Discovery.WhoAmIResponse

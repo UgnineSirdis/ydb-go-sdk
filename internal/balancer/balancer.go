@@ -8,22 +8,22 @@ import (
 
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/config"
-	balancerConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/closer"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/conn"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials"
-	internalDiscovery "github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery"
-	discoveryConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/discovery/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/endpoint"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/repeater"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xslices"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xsync"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/config"
+	balancerConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/closer"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/conn"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials"
+	internalDiscovery "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery"
+	discoveryConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/discovery/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/endpoint"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/repeater"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xslices"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xsync"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var ErrNoEndpoints = xerrors.Wrap(fmt.Errorf("no endpoints"))
@@ -88,7 +88,7 @@ func (b *Balancer) clusterDiscoveryAttempt(ctx context.Context) (err error) {
 		onDone  = trace.DriverOnBalancerClusterDiscoveryAttempt(
 			b.driverConfig.Trace(), &ctx,
 			stack.FunctionID(
-				"github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer.(*Balancer).clusterDiscoveryAttempt"),
+				"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer.(*Balancer).clusterDiscoveryAttempt"),
 			address,
 		)
 		endpoints []endpoint.Endpoint
@@ -128,7 +128,7 @@ func (b *Balancer) applyDiscoveredEndpoints(ctx context.Context, newest []endpoi
 		onDone = trace.DriverOnBalancerUpdate(
 			b.driverConfig.Trace(), &ctx,
 			stack.FunctionID(
-				"github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer.(*Balancer).applyDiscoveredEndpoints"),
+				"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer.(*Balancer).applyDiscoveredEndpoints"),
 			b.config.DetectNearestDC,
 		)
 		previous = b.connections().All()
@@ -171,7 +171,7 @@ func (b *Balancer) applyDiscoveredEndpoints(ctx context.Context, newest []endpoi
 func (b *Balancer) Close(ctx context.Context) (err error) {
 	onDone := trace.DriverOnBalancerClose(
 		b.driverConfig.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer.(*Balancer).Close"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer.(*Balancer).Close"),
 	)
 	defer func() {
 		onDone(err)
@@ -197,7 +197,7 @@ func New(
 	var (
 		onDone = trace.DriverOnBalancerInit(
 			driverConfig.Trace(), &ctx,
-			stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer.New"),
+			stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer.New"),
 			driverConfig.Balancer().String(),
 		)
 		discoveryConfig = discoveryConfig.New(append(opts,
@@ -326,7 +326,7 @@ func (b *Balancer) connections() *connectionsState {
 func (b *Balancer) getConn(ctx context.Context) (c conn.Conn, err error) {
 	onDone := trace.DriverOnBalancerChooseEndpoint(
 		b.driverConfig.Trace(), &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer.(*Balancer).getConn"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer.(*Balancer).getConn"),
 	)
 	defer func() {
 		if err == nil {

@@ -11,8 +11,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/version"
-	"github.com/ydb-platform/ydb-go-sdk/v3/query"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/version"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/query"
 )
 
 func TestQueryMultiResultSets(t *testing.T) {

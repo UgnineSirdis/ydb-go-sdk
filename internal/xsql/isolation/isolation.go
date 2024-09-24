@@ -5,8 +5,8 @@ import (
 	"database/sql/driver"
 	"fmt"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
 )
 
 // ToYDB maps driver transaction options to ydb transaction Option or query transaction control.

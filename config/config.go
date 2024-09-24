@@ -8,12 +8,12 @@ import (
 	"google.golang.org/grpc"
 	grpcCodes "google.golang.org/grpc/codes"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/credentials"
-	balancerConfig "github.com/ydb-platform/ydb-go-sdk/v3/internal/balancer/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/config"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/meta"
-	"github.com/ydb-platform/ydb-go-sdk/v3/retry/budget"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/credentials"
+	balancerConfig "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/balancer/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/config"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/retry/budget"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // Config contains driver configuration.

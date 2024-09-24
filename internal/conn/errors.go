@@ -3,7 +3,7 @@ package conn
 import (
 	grpcCodes "google.golang.org/grpc/codes"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 func IsBadConn(err error, goodConnCodes ...grpcCodes.Code) bool {

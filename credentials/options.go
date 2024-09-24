@@ -6,7 +6,7 @@ import (
 	"github.com/golang-jwt/jwt/v4"
 	"google.golang.org/grpc"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials"
 )
 
 type Oauth2TokenExchangeCredentialsOption = credentials.Oauth2TokenExchangeCredentialsOption

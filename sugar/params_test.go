@@ -9,11 +9,11 @@ import (
 
 	"github.com/stretchr/testify/require"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/bind"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xtest"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
-	"github.com/ydb-platform/ydb-go-sdk/v3/testutil"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/bind"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xtest"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/testutil"
 )
 
 func TestGenerateDeclareSection(t *testing.T) {
@@ -76,7 +76,7 @@ func TestGenerateDeclareSection(t *testing.T) {
 			),
 			declare: `
 				DECLARE $a AS Bool;
-				DECLARE $b AS Int64; 
+				DECLARE $b AS Int64;
 				DECLARE $c AS Optional<Utf8>;
 			`,
 		},
@@ -88,7 +88,7 @@ func TestGenerateDeclareSection(t *testing.T) {
 			),
 			declare: `
 				DECLARE $a AS Bool;
-				DECLARE $b AS Int64; 
+				DECLARE $b AS Int64;
 				DECLARE $c AS Optional<Utf8>;
 			`,
 		},

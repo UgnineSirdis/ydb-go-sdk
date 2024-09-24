@@ -34,21 +34,21 @@ Behind the scene, `database/sql` APIs are implemented using the native interface
 ```go
 import (
     "database/sql"
-  
-    "github.com/ydb-platform/ydb-go-sdk/v3"
+
+    "github.com/UgnineSirdis/ydb-go-sdk/v3"
 )
 
 func main() {
     // init native ydb-go-sdk driver
     nativeDriver, err := ydb.Open(context.TODO(), "grpc://localhost:2136/local",
-        // See many ydb.Option's for configure driver https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#Option
+        // See many ydb.Option's for configure driver https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#Option
     )
     if err != nil {
         // fallback on error
     }
     defer nativeDriver.Close(context.TODO())
     connector, err := ydb.Connector(nativeDriver,
-        // See ydb.ConnectorOption's for configure connector https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#ConnectorOption
+        // See ydb.ConnectorOption's for configure connector https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#ConnectorOption
     )
     if err != nil {
         // fallback on error
@@ -65,8 +65,8 @@ func main() {
 ```go
 import (
     "database/sql"
-  
-    _ "github.com/ydb-platform/ydb-go-sdk/v3"
+
+    _ "github.com/UgnineSirdis/ydb-go-sdk/v3"
 )
 
 func main() {
@@ -87,7 +87,7 @@ Default balancer algorithm is a `random choice`.
 Client balancer may be re-configured with option `ydb.WithBalancer`:
 ```go
 import (
-    "github.com/ydb-platform/ydb-go-sdk/v3/balancers"
+    "github.com/UgnineSirdis/ydb-go-sdk/v3/balancers"
 )
 func main() {
     nativeDriver, err := ydb.Open(context.TODO(), "grpc://localhost:2136/local",
@@ -133,7 +133,7 @@ rows, err := db.QueryContext(ctx,
 if err != nil {
     log.Fatal(err)
 }
-defer rows.Close() // always close rows 
+defer rows.Close() // always close rows
 var (
     id          *string
     title       *string
@@ -185,7 +185,7 @@ rows, err := tx.QueryContext(ctx,
 if err != nil {
     log.Fatal(err)
 }
-defer rows.Close() // always close rows 
+defer rows.Close() // always close rows
 var (
     id          *string
     title       *string
@@ -235,7 +235,7 @@ res, err = db.ExecContext(ydb.WithQueryMode(ctx, ydb.SchemeQueryMode),
 
 ## Changing the transaction control mode <a name="tx-control"></a>
 
-Default `YDB`'s transaction control mode is a `SerializableReadWrite`. 
+Default `YDB`'s transaction control mode is a `SerializableReadWrite`.
 Default transaction control mode can be changed outside of interactive transactions by updating the context object:
 ```go
 rows, err := db.QueryContext(ydb.WithTxControl(ctx, table.OnlineReadOnlyTxControl()),
@@ -259,7 +259,7 @@ Most of those errors are transient.
 or nil if the operation succeeds.
 ```go
 import (
-   "github.com/ydb-platform/ydb-go-sdk/v3/retry"
+   "github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 ...
 err := retry.Do(context.TODO(), db, func(ctx context.Context, cc *sql.Conn) error {
@@ -285,7 +285,7 @@ The logic within the custom lambda does not need the explicit commit or rollback
 
 ```go
 import (
-    "github.com/ydb-platform/ydb-go-sdk/v3/retry"
+    "github.com/UgnineSirdis/ydb-go-sdk/v3/retry"
 )
 ...
 err := retry.DoTx(context.TODO(), db, func(ctx context.Context, tx *sql.Tx) error {
@@ -307,23 +307,23 @@ err := retry.DoTx(context.TODO(), db, func(ctx context.Context, tx *sql.Tx) erro
 `database/sql` driver for `YDB` supports the following types of query parameters:
 * `sql.NamedArg` types with native Go's types and ydb types:
    ```go
-   rows, err := db.QueryContext(ctx, 
+   rows, err := db.QueryContext(ctx,
       `
         DECLARE $title AS Text;
         DECLARE $views AS Uint64;
         DECLARE $ts AS Datetime;
         SELECT season_id FROM seasons WHERE title LIKE $title AND views > $views AND first_aired > $ts;
       `,
-      sql.Named("$title", "%Season 1%"), // argument name with prefix `$` 
+      sql.Named("$title", "%Season 1%"), // argument name with prefix `$`
       sql.Named("views", uint64(1000)),  // argument name without prefix `$` (driver will prepend `$` if necessary)
       sql.Named("$ts", types.DatetimeValueFromTime( // native ydb type
-        time.Now().Add(-time.Hour*24*365), 
+        time.Now().Add(-time.Hour*24*365),
       )),
    )
    ```
 * `table.ParameterOption` arguments:
    ```go
-   rows, err := db.QueryContext(ctx, 
+   rows, err := db.QueryContext(ctx,
       `
         DECLARE $title AS Text;
         DECLARE $views AS Uint64;
@@ -335,7 +335,7 @@ err := retry.DoTx(context.TODO(), db, func(ctx context.Context, tx *sql.Tx) erro
    ```
 * single `*table.QueryParameters` argument:
    ```go
-   rows, err := db.QueryContext(ctx, 
+   rows, err := db.QueryContext(ctx,
       `
         DECLARE $title AS Text;
         DECLARE $views AS Uint64;
@@ -386,9 +386,9 @@ import (
   "context"
   "database/sql"
 
-  "github.com/ydb-platform/ydb-go-sdk/v3"
-  "github.com/ydb-platform/ydb-go-sdk/v3/table"
-  "github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+  "github.com/UgnineSirdis/ydb-go-sdk/v3"
+  "github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+  "github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 func main() {
@@ -400,8 +400,8 @@ func main() {
     PRAGMA TablePathPrefix("/local/path/to/my/folder");
     DECLARE $p0 AS Int32;
     DECLARE $p1 AS Utf8;
-    SELECT $p0, $p1`, 
-    sql.Named("$p0", 42), 
+    SELECT $p0, $p1`,
+    sql.Named("$p0", 42),
     table.ValueParam("$p1", types.TextValue("my string")),
   )
   // process row ...
@@ -418,18 +418,18 @@ import (
   "context"
   "database/sql"
 
-  _ "github.com/ydb-platform/ydb-go-sdk/v3" // anonymous import for registering driver
+  _ "github.com/UgnineSirdis/ydb-go-sdk/v3" // anonymous import for registering driver
 )
 
 func main() {
   var (
     ctx = context.TODO()
-    db = sql.Open("ydb", 
+    db = sql.Open("ydb",
       "grpc://localhost:2136/local?"+
         "go_auto_bind="+
           "table_path_prefix(/local/path/to/my/folder),"+
           "declare,"+
-          "positional", 
+          "positional",
     )
   )
   defer db.Close() // cleanup resources
@@ -444,7 +444,7 @@ import (
   "context"
   "database/sql"
 
-  "github.com/ydb-platform/ydb-go-sdk/v3" 
+  "github.com/UgnineSirdis/ydb-go-sdk/v3"
 )
 
 func main() {
@@ -467,7 +467,7 @@ func main() {
 The original simple query `SELECT ?, ?` will be expanded on the driver side to the following:
 
 ```sql
--- bind TablePathPrefix 
+-- bind TablePathPrefix
 PRAGMA TablePathPrefix("/local/path/to/my/folder");
 
 -- bind declares
@@ -483,17 +483,17 @@ This expanded query will be sent to `ydbd` server instead of the original one.
 For additional examples of query enrichment, see `ydb-go-sdk` documentation:
 
 * specifying `TablePathPrefix`:
-    * using [connection string parameter](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindTablePathPrefix)
-    * using [connector option](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindTablePathPrefixOverConnector)
+    * using [connection string parameter](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindTablePathPrefix)
+    * using [connector option](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindTablePathPrefixOverConnector)
 * declaring bindings:
-    * using [connection string parameter](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindDeclare)
-    * using [connector option](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindDeclareOverConnector)
+    * using [connection string parameter](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindDeclare)
+    * using [connector option](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindDeclareOverConnector)
 * positional arguments binding:
-    * using [connection string parameter](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindPositionalArgs)
-    * using [connector option](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindPositionalArgsOverConnector)
+    * using [connection string parameter](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindPositionalArgs)
+    * using [connector option](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindPositionalArgsOverConnector)
 * numeric arguments binding:
-    * using [connection string parameter](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindNumericlArgs)
-    * using [connector option](https://pkg.go.dev/github.com/ydb-platform/ydb-go-sdk/v3#example-package-DatabaseSQLBindNumericArgsOverConnector)
+    * using [connection string parameter](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindNumericlArgs)
+    * using [connector option](https://pkg.go.dev/github.com/UgnineSirdis/ydb-go-sdk/v3#example-package-DatabaseSQLBindNumericArgsOverConnector)
 
 For a deep understanding of query enrichment see also [unit-tests](https://github.com/ydb-platform/ydb-go-sdk/blob/master/query/bind_test.go).
 
@@ -579,7 +579,7 @@ Adding of logging provides with [debug adapters](README.md#debug) and wrotes in 
 Example of adding `zap` logging:
 ```go
 import (
-    "github.com/ydb-platform/ydb-go-sdk/v3/trace"
+    "github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
     ydbZap "github.com/ydb-platform/ydb-go-sdk-zap"
 )
 ...
@@ -605,7 +605,7 @@ Monitoring of driver events provides with [debug adapters](README.md#debug) and 
 Example of adding `Prometheus` monitoring:
 ```go
 import (
-    "github.com/ydb-platform/ydb-go-sdk/v3/trace"
+    "github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
     ydbMetrics "github.com/ydb-platform/ydb-go-sdk-prometheus"
 )
 ...
@@ -631,7 +631,7 @@ Adding of `Jaeger` traces about driver events allowed only if connection to `YDB
 Example of adding `Jaeger` tracing:
 ```go
 import (
-    "github.com/ydb-platform/ydb-go-sdk/v3/trace"
+    "github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
     ydbOpentracing "github.com/ydb-platform/ydb-go-sdk-opentracing"
 )
 ...
@@ -651,4 +651,4 @@ db := sql.OpenDB(connector)
 
 ## Example of usage <a name="example"></a>
 
-[Basic example](https://github.com/ydb-platform/ydb-go-examples/tree/master/basic) about series written with `database/sql` driver for `YDB` placed in [examples repository](https://github.com/ydb-platform/ydb-go-examples/tree/master/database_sql)  
+[Basic example](https://github.com/ydb-platform/ydb-go-examples/tree/master/basic) about series written with `database/sql` driver for `YDB` placed in [examples repository](https://github.com/ydb-platform/ydb-go-examples/tree/master/database_sql)

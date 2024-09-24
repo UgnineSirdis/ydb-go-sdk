@@ -6,7 +6,7 @@ import (
 	"github.com/google/uuid"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
 )
 
 type newTraceIDOpts struct {

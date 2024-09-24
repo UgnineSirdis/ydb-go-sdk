@@ -4,11 +4,11 @@ import (
 	"context"
 	"sync/atomic"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreadercommon"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topicreaderinternal"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/tx"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreadercommon"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topicreaderinternal"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/tx"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // Reader allow to read message from YDB topics.

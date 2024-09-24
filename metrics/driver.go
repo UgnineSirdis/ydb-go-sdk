@@ -4,9 +4,9 @@ import (
 	"strconv"
 	"sync"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/repeater"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/repeater"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 // driver makes driver with New publishing

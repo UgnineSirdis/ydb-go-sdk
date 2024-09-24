@@ -6,10 +6,10 @@ import (
 
 	"github.com/jonboulle/clockwork"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/backoff"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xcontext"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/backoff"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xcontext"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 type Repeater interface {
@@ -147,7 +147,7 @@ func (r *repeater) wakeUp(ctx context.Context, e Event) (err error) {
 	ctx = WithEvent(ctx, e)
 
 	onDone := trace.DriverOnRepeaterWakeUp(r.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/repeater.(*repeater).wakeUp"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/repeater.(*repeater).wakeUp"),
 		r.name, e,
 	)
 	defer func() {

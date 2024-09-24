@@ -43,26 +43,26 @@ func anonymousFunctionCall() string {
 func TestFunctionIDForGenericType(t *testing.T) {
 	t.Run("StaticFunc", func(t *testing.T) {
 		require.Equal(t,
-			"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.staticCall",
+			"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.staticCall",
 			staticCall(),
 		)
 	})
 	t.Run("GenericTypeCall", func(t *testing.T) {
 		require.Equal(t,
-			"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.genericType.Call",
+			"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.genericType.Call",
 			genericType[uint64]{}.Call(),
 		)
 	})
 	t.Run("StarTypeCall", func(t *testing.T) {
 		x := starType{}
 		require.Equal(t,
-			"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.(*starType).starredCall",
+			"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.(*starType).starredCall",
 			x.starredCall(),
 		)
 	})
 	t.Run("AnonymousFunctionCall", func(t *testing.T) {
 		require.Equal(t,
-			"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack.anonymousFunctionCall",
+			"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack.anonymousFunctionCall",
 			anonymousFunctionCall(),
 		)
 	})

@@ -14,10 +14,10 @@ import (
 	"time"
 
 	environ "github.com/ydb-platform/ydb-go-sdk-auth-environ"
-	"github.com/ydb-platform/ydb-go-sdk/v3"
-	"github.com/ydb-platform/ydb-go-sdk/v3/sugar"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table"
-	"github.com/ydb-platform/ydb-go-sdk/v3/table/types"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/sugar"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/table/types"
 )
 
 type service struct {
@@ -175,7 +175,7 @@ func (s *service) upsertRows(ctx context.Context, rows []row) (err error) {
 				table.SerializableReadWriteTxControl(table.CommitTx()),
 				fmt.Sprintf(`
 					PRAGMA TablePathPrefix("%s");
-			
+
 					DECLARE $rows AS List<Struct<
 						url: Text,
 						code: Int32,

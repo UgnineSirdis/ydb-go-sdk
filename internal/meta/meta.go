@@ -8,11 +8,11 @@ import (
 
 	"google.golang.org/grpc/metadata"
 
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/credentials"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/stack"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/version"
-	"github.com/ydb-platform/ydb-go-sdk/v3/internal/xerrors"
-	"github.com/ydb-platform/ydb-go-sdk/v3/trace"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/credentials"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/stack"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/version"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/internal/xerrors"
+	"github.com/UgnineSirdis/ydb-go-sdk/v3/trace"
 )
 
 var pid = os.Getpid()
@@ -118,7 +118,7 @@ func (m *Meta) meta(ctx context.Context) (_ metadata.MD, err error) {
 	var token string
 
 	done := trace.DriverOnGetCredentials(m.trace, &ctx,
-		stack.FunctionID("github.com/ydb-platform/ydb-go-sdk/v3/internal/meta.(*Meta).meta"),
+		stack.FunctionID("github.com/UgnineSirdis/ydb-go-sdk/v3/internal/meta.(*Meta).meta"),
 	)
 	defer func() {
 		done(token, err)

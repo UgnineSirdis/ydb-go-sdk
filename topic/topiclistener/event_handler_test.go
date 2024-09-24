@@ -1,6 +1,6 @@
 package topiclistener
 
-import "github.com/ydb-platform/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
+import "github.com/UgnineSirdis/ydb-go-sdk/v3/internal/topic/topiclistenerinternal"
 
 var (
 	_ EventHandler                       = BaseHandler{} // check implementation
