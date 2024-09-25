@@ -12,6 +12,7 @@ import (
 	"github.com/ydb-platform/ydb-go-genproto/Ydb_Table_V1"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Table"
+	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_Formats"
 	"github.com/ydb-platform/ydb-go-genproto/protos/Ydb_TableStats"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/metadata"
@@ -1320,6 +1321,11 @@ func (s *session) BulkUpsertCsv(ctx context.Context, table string, data []byte,
 	_, err = s.tableService.BulkUpsert(ctx,
 		&Ydb_Table.BulkUpsertRequest{
 			Table: table,
+			DataFormat: &Ydb_Table.BulkUpsertRequest_CsvSettings{
+				CsvSettings: &Ydb_Formats.CsvSettings{
+					Header: true,
+				},
+			},
 			Data:  data,
 			OperationParams: operation.Params(
 				ctx,
